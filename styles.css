@@ -1,0 +1,815 @@
+/*Estilos Generales*/
+/*IMPORTANDO LA FUENTE DEL PROYECTO*/
+
+@font-face {
+    font-family: OpenSansCustom;
+    src: url(fonts/opensans/OpenSansCondensed-Bold.ttf);
+  }
+  
+  
+  /* estilos generales*/
+  * {
+    text-decoration: none;
+    font-family: OpenSansCustom;
+    margin: 0px;
+    padding: 0px;
+  }
+  
+   
+  /*ESTILOS DEL CONTAINER*/
+  
+  
+  #contenedorPrincipal{
+  background-image: url("img/mansion2.jpg");
+  height: 932px;
+  margin: -15px;
+  } 
+  
+  .container-fluid{
+    box-shadow: 0px 0px 10px #ccc;
+    /*min-height: 80vh;*/
+    background-color: #c0c0c0;
+   /* background-color: #f0e2d0;*/
+  }
+  
+  
+  /*CABECERA*/
+  
+  .img_logo{
+   
+    width: 100px;
+    margin-left: 6px;
+    position: absolute;
+    margin-top: 6px;
+  
+    
+  }
+  
+  .img_logo_index{
+        width: 100px;
+        margin-left: 22px;
+        position: absolute;
+        margin-top: 21px;
+  }
+  
+  
+  /*BARRA NAVEGACION*/
+  
+  #menu_index_index{
+    position: relative;
+      list-style: none;
+      top: 40px;
+      left: 460px;
+      
+  }
+  
+  #menu_index_index a{
+    
+    color: rgba(255, 255, 255, 0.685);
+  
+  }
+  
+  .menu{
+    top: -20px;
+      left: 240px;
+  }
+  
+  #menu_principal{
+    background-color: RGB(192, 192, 192);
+    height: 120px;
+    border-bottom: 1px solid grey;
+  }
+  
+  
+  #menu_index{
+    background-color: RGB(192, 192, 192);
+    list-style: none;
+    margin-top: 48px;
+  }
+  
+  a{
+    font-family: OpenSansCustom;
+    text-decoration: none;
+    color:#00000098;
+   /* color: rgb(138, 112, 90);*/
+    font-size: 25px;
+    list-style: none;
+  }
+  
+  a:hover {
+    color: #aa8976;
+  }
+  
+  
+  
+  
+  /* FOOTER*/
+  
+  #pAutor{
+    margin-left: 445px;
+    /*text-align: center;*/
+  }
+  
+  
+  #footer .info {
+    flex-grow: 1;
+    order: 2;
+    margin-left: 20px;
+    text-align: right;
+    margin-right: 10px;
+  }
+  
+  #footer_index{
+    background-color: #444443;
+    color: #f0e2d0;
+  
+  }
+  
+  
+  #footer_index img{
+    width: 40px;}
+  
+  
+  footer h3 {
+    color: #aa8976;
+    font-size: 20px;
+  }
+  
+  footer h5{
+    font-size: 17px;
+  
+  }
+  
+  #footer{
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
+    height: 120px;
+    align-items: center;
+    box-shadow: 0px 0px 10px #ccc;
+    background: linear-gradient(to right, #6fe7c3, #c6ebc9);
+    margin-top: 30px;
+    color: #aa8976;
+    border: 1px solid #c6ebc9;
+  }
+  
+  
+  
+  /*ESTILOS PAGINA DE IMAGENES PROPIEDADES*/
+  #galeria {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 0px;
+  }
+  
+  .galerias {
+    display: flex;
+    justify-content: left;
+    width: 100%;
+    flex-wrap: wrap;
+    margin-left: 0px;
+  }
+  
+  .contFiltradas{
+    border: 5px solid rgb(75, 73, 73);
+  }
+  
+  .imgs {
+    flex-grow: 1;
+    height: 250px;
+    width: 250px;
+    object-fit: cover;
+    padding: 5px;
+    border-radius: 15px;
+  }
+  
+  /*
+  .imgs:hover {-webkit-transform:scale(1.3);transform:scale(1.3);}*/
+  
+  #galeria {overflow:hidden;}
+  
+  
+  #imgPortada{
+    overflow: hidden;
+    object-fit: cover;
+    
+  }
+  
+  
+  #filtros{
+  
+    margin-left: 10px;
+    margin-top: -9999px;
+  
+    /*     margin-left: 12px;
+      border: 2px solid gray;
+      margin-left: 10px; 
+      margin-top: 25px;
+      */
+  }
+  
+  
+  /*estilos del menu lateral de filtros*/
+  
+  #cdolar{
+    margin-left: 20px;
+  }
+  
+  #cdolar, #cpeso{
+    margin-bottom: 15px;
+  }
+  
+  #idesde, #ihasta{
+    margin-bottom: 15px;
+  }
+  
+  #pdesde, #phasta{
+    margin: 0px;
+  }
+  
+  #baplicar{
+    width: 70px;
+    margin-left: 47px;
+    margin-top: 10px;
+  }
+  
+  #pfiltros{
+    margin-left: 47px;
+    margin-top: 8px;
+  }
+  
+  /*BOTONES DE BUSQUEDA pagina INDEX*/
+  
+  /*
+  #contenedorFiltros{
+    //display: none;
+  }*/
+  
+  #comboOperacion, #comboPropiedad, #comboDormitorios, #botonBuscar{
+    position: absolute;
+      width: 150px;
+      height: 33px;
+  }
+  
+  
+  #comboOperacion {
+    top: 250px;
+    left: 226px;
+    width: 201px;
+  }
+  
+  #comboPropiedad {
+    top: 250px;
+    left: 429px;
+    width: 225px;
+  }
+  
+  
+  #comboDormitorios{
+    top: 250px;
+    left: 659px;
+  }
+  #botonBuscar{
+    top: 250px;
+    left: 960px;
+  }
+  
+  #tituloFiltro{
+    text-transform: none;
+    position: relative;
+    top: 217px;
+    left: -260px;  
+  }
+  
+  #displayIndex{
+    border: 1px solid black;
+    margin: 20px; 
+    padding: 0px;
+  }
+  
+  #displayIndex ul{
+    margin-left: 20px;
+  
+  }
+  
+  
+  p {
+    margin-top: 0px;
+    margin-bottom: 8px;
+    margin-left: 30px;
+  }
+  
+  /* PAGINA CONTACTO*/
+  
+  
+  #contenedorMapa{
+      margin-left: 95px;
+  }
+  .contacto button, .contacto input, .contacto label, .contacto textarea {
+    text-transform: none;
+    position: relative;
+    margin-left: 10px;
+   /* top: 175px;
+    left: 300px;*/
+    width: 400px;
+    color:#00000098;
+  }
+  
+  .contacto h5{
+    color:#00000098;
+  }
+  
+  #botEnviar, #botLimpiar{
+    width: 160px;
+  }
+  
+  
+  .contacto button,  .contacto input, .contacto textarea {
+    margin-bottom: 40px;
+  }
+  
+  .contacto textarea{
+    height: 150px;
+  }
+  
+  #comboDormitorios{
+    width: 295px;
+  }
+    
+  
+  #botonBuscar{
+    width: 70px;
+  }
+  
+  iframe{
+    width: 830px;
+      height: 449px;
+  }
+  
+  
+  
+  
+  /*ESTILOS PAGINAS EMPRENDIMIENTOS*/
+  
+  .textoEmprendimientos{
+    float: right;
+    color:#00000098;
+    align-content: center;
+    font-family: OpenSansCustom;
+    width: 550px;
+    text-align: justify;
+    margin-top: 3px;
+    margin-left: 5px;
+  }
+  
+  .cajasEmprendimientos{
+    display: flex;
+    border: 1px solid grey;
+    width: 850px;
+    padding: 10px;
+    margin: 10px;
+  }
+  
+  .imgEmprendimientos{
+    height: 253px;
+    width: 436px;
+    object-fit: cover;
+    padding: 5px;
+  }
+  
+  /* PAGINA NOSOTROS*/
+  
+  .cajasNosotros{
+    display: flex;
+    border: 1px solid grey;
+    width: 1150px;
+      padding: 10px;
+    margin: 10px;
+  }
+  
+  .imgNosotros{
+    height: 350px;
+    width: 830px;
+      object-fit: cover;
+    padding: 5px;
+  }
+  
+  
+  .textoNosotros{
+    float: right;
+    color:#00000098;
+    align-content: center;
+    font-family: OpenSansCustom;
+    width: 550px;
+    text-align: justify;
+    margin-top: 3px;
+    margin-left: 5px;
+  }
+  
+  
+  /*RESPONSIVE MENU*/
+  
+  /* PAGINA CONTACTO */
+  /*ARRANCO DESDE IPHONE 7 Y DE AHI VOY SUBIENDO LOS PIXELES */
+  /*desde 0 px hasta 1067 px se ejecutaran estos estilos*/
+  
+  /*751*/
+  
+  /*
+  @media (max-width: 469px) { 
+    .img_logo {
+      margin-left: 0px;
+    }
+    .menu {
+      top: -45px;
+      left: 90px;
+    }
+    #menu_principal {
+        height: 135px;
+    }
+    a{
+      font-size: 16px;
+    }
+    .contacto input, .contacto textarea {
+      width: 260px;
+    }
+    .img_logo {
+      width: 92px;;
+      margin-top: 10px;
+    }
+    iframe {
+      width: 260px;
+      height: 350px;
+  }
+  #botEnviar, #botLimpiar {
+    width: 120px;
+  }
+  
+  footer h5 {
+    font-size: 14px;
+  }
+  #pAutor {
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  }
+  
+  
+  /*
+  
+  @media (min-width: 470px){
+    .menu {
+      top: -45px;
+      left: 45px;
+  }
+  .img_logo {
+    margin-left: 0px;
+  }
+  
+  #menu_principal {
+      height: 135px;
+  }
+  a{
+    font-size: 18px;
+  }
+  .contacto input, .contacto textarea {
+    width: 260px;
+  }
+  .img_logo {
+    width: 92px;;
+    margin-top: 10px;
+  }
+  iframe {
+    width: 260px;
+    height: 350px;
+  }
+  #botEnviar, #botLimpiar {
+  width: 120px;
+  }
+  
+  footer h5 {
+  font-size: 14px;
+  }
+  #pAutor {
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  }
+  
+  
+  
+  @media (min-width: 550px){
+  
+    .menu {
+      top: -45px;
+      left: 30px;
+  }
+  .img_logo {
+    margin-left: 0px;
+  }
+  
+  #menu_principal {
+      height: 135px;
+  }
+  a{
+    font-size: 18px;
+  }
+  .contacto input, .contacto textarea {
+    width: 260px;
+  }
+  .img_logo {
+    width: 92px;;
+    margin-top: 10px;
+  }
+  iframe {
+    width: 260px;
+    height: 350px;
+  }
+  #botEnviar, #botLimpiar {
+  width: 120px;
+  }
+  
+  footer h5 {
+  font-size: 14px;
+  }
+  #pAutor {
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  }
+  
+  
+  
+  /**acomodando el grid de bootstrap*/
+  /*
+  @media (min-width: 581px){ 
+    .menu {
+      top: -20px;
+      left: 40px;
+      padding-right: 0px;
+  }
+  
+  #menu_index{
+    padding: 0px;
+  }
+  
+  
+  #menu_index li{
+    padding: 0px;
+  } 
+  
+  #menu_index a{
+    padding: 0px;
+  } 
+  
+  
+  #menu_index{
+  margin-left: 0px;
+  margin-right: 0px;
+  
+  } 
+  
+  
+  .img_logo {
+    margin-left: 0px;
+  }
+  
+  #menu_principal {
+      height: 135px;
+  }
+  a{
+    font-size: 18px;
+  }
+  .contacto input, .contacto textarea {
+    width: 260px;
+  }
+  .img_logo {
+    width: 92px;;
+    margin-top: 10px;
+  }
+  iframe {
+    width: 260px;
+    height: 350px;
+  }
+  #botEnviar, #botLimpiar {
+  width: 120px;
+  }
+  
+  footer h5 {
+  font-size: 14px;
+  }
+  #pAutor {
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  }
+  
+  
+  
+  /*
+  
+  @media (min-width: 670px){
+  
+    .menu {
+      top: -45px;
+      left: 55px;
+  }
+  .img_logo {
+    margin-left: 0px;
+  }
+  
+  #menu_principal {
+      height: 135px;
+  }
+  a{
+    font-size: 18px;
+  }
+  .contacto input, .contacto textarea {
+    width: 300px;
+  }
+  .img_logo {
+    width: 92px;;
+    margin-top: 10px;
+  }
+  iframe {
+    width: 300px;
+    height: 350px;
+  }
+  #botEnviar, #botLimpiar {
+  width: 120px;
+  }
+  
+  footer h5 {
+  font-size: 14px;
+  }
+  #pAutor {
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  }
+  
+  
+  
+  
+  @media (min-width: 770px){
+    .menu {
+      top: -45px;
+      left: 85px;
+  }
+  .img_logo {
+    margin-left: 0px;
+  }
+  
+  #menu_principal {
+      height: 135px;
+  }
+  a{
+    font-size: 18px;
+  }
+  .contacto input, .contacto textarea {
+    width: 345px;
+  }
+  .img_logo {
+    width: 92px;;
+    margin-top: 10px;
+  }
+  iframe {
+    width: 345px;
+    height: 350px;
+  }
+  #botEnviar, #botLimpiar {
+  width: 120px;
+  }
+  
+  footer h5 {
+  font-size: 14px;
+  }
+  #pAutor {
+    margin-left: 10px;
+    text-align: left;
+  }
+  
+  }
+  
+  
+  
+  
+  @media (min-width: 950px){
+    .menu {
+      top: -45px;
+      left: 145px;
+  }
+  .img_logo {
+    margin-left: 0px;
+  }
+  
+  #menu_principal {
+      height: 135px;
+  }
+  a{
+    font-size: 18px;
+  }
+  .contacto input, .contacto textarea {
+    width: 425px;
+  }
+  .img_logo {
+    width: 92px;;
+    margin-top: 10px;
+  }
+  iframe {
+    width: 425px;
+    height: 350px;
+  }
+  #botEnviar, #botLimpiar {
+  width: 120px;
+  }
+  
+  footer h5 {
+  font-size: 14px;
+  }
+  
+  }
+  
+  
+  @media (min-width: 1100px){
+    .menu {
+      top: -45px;
+      left: 195px;
+  }
+  .img_logo {
+    margin-left: 0px;
+  }
+  
+  #menu_principal {
+      height: 135px;
+  }
+  a{
+    font-size: 18px;
+  }
+  .contacto input, .contacto textarea {
+    width: 500px;
+  }
+  .img_logo {
+    width: 105px;;
+    margin-top: 10px;
+  }
+  iframe {
+    width: 500px;
+    height: 350px;
+  }
+  #botEnviar, #botLimpiar {
+  width: 120px;
+  }
+  
+  footer h5 {
+  font-size: 14px;
+  }
+  
+  }
+  
+  
+  
+  @media (min-width: 1300px){
+    .menu {
+      top: -45px;
+      left: 195px;
+  }
+  .img_logo {
+    margin-left: 0px;
+  }
+  
+  #menu_principal {
+      height: 135px;
+  }
+  a{
+    font-size: 18px;
+  }
+  .contacto input, .contacto textarea {
+    width: 500px;
+  }
+  .img_logo {
+    width: 105px;;
+    margin-top: 10px;
+  }
+  iframe {
+    width: 500px;
+    height: 350px;
+  }
+  #botEnviar, #botLimpiar {
+  width: 120px;
+  }
+  
+  footer h5 {
+  font-size: 14px;
+  }
+  
+  }
+  
+  */

@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang = "es">
+    <head>
+        <script type="text/javascript" src="script.js"></script>
+        <script src="jquery/jquery-3.3.1.min.js"></script>	 	
+        <script src="popper/popper.min.js"></script>	 	 	
+        <script src="bootstrap4/js/bootstrap.min.js"></script>     
+        <!--  Plugin Toastr -->
+        <script src="plugins/toastr/toastr.min.js"></script>
+        <script src="codigo.js"></script> 
+
+        <meta charset="UTF-8"
+        <meta http-equiv="X-UA-Compatible" content="IE=edge"
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no">
+       
+    
+        <title> IW CONSULTING - Consultora de Riesgos Crediticios</title>
+        <meta name="description" content="Esta es una pagina de una consultora de riesgos crediticios en Buenos Aires - Argentina">
+        <meta name="keywords" content="consultora de riesgos crediticios">
+        <meta name="author" content="Act. Ian Wade">
+        <!-- OPEN GRAPH-->
+        <meta property="og:locale" content="Es_es">
+        <meta property="og:type" content="website">
+        <meta property="og:title" content="IW CONSULTING - SA">
+        <meta property="og:description" content="Pagina de la consultora de riesgos crediticios IW CONSULTING - SA">
+        <meta property="og:url" content="https://iwconsulting.com.ar ">
+        
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="styles.css" />
+        <link rel="icon" type="favicon/x-icon" href="img/logo.png" />
+        <link rel="shortcut icon" href="#" />      
+        <link rel="stylesheet" href="bootstrap4/css/bootstrap.min.css">
+        <link rel="stylesheet" href="plugins/toastr/toastr.min.css"> 
+        <link rel="stylesheet" href="estilos.css">
+
+
+
+
+        <!-- <meta property="og:image" content="img">
+        <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css" />
+        -->
+        
+    </head>
+
+
+    <body>
+    <div class="container">
+        <div class="row">
+            <div class="col-lg-6">  
+             <button id="btn1" class="btn btn-info">Mostrar Notificación</button>             
+            </div>                                        
+        </div>                  
+    </div>
+
+<div class="container-fluid">
+        <main id="contenedorPrincipal" class="row">
+            <ul id="menu_index_index" class="col-6 row menu ml-8">
+                <!--  col-8 row-->
+                <li class="col"> <a href="index.html" class="linkInicio aIndex"> INICIO</a></li>
+                <li class="col"> <a href="Formulario.html" class="linkForms aIndex"> FORMULARIOS</a></li>
+                <li class="col"> <a href="nosotros.html" class="linkInicio aIndex"> NOSOTROS </a></li>
+                <li class="col"> <a href="contacto.html" class="linkInicio aIndex"> CONTACTO </a></li>
+            </ul>
+            <img class="img_logo_index" src="img/logo.png" alt="logo de la constructora">
+
+
+            <div id="combos">
+                <h5 id="tituloFiltro">Ingrese una opcion para elegir el tipo de credito...</h5>
+
+                <select id="comboAccion">
+                    <!--  onclick="menuImprimir(event)" onclick="menuImprimir(evento)" -->
+                    <option value='' disabled selected> Filtrar por tipo de operacion</option>
+                    <option value="Credito a solicitar">Credito a solicitar</option>
+                    <option value="Analisis de Riesgo">Analisis de Riesgo</option>
+                    <option value="Situacion actual">Situacion actual</option>
+                    <option value="Clasifiación de riesgo">Situacion actual</option>
+                </select>
+
+                <select id="comboCredito">
+                    <option value='' disabled selected> Filtrar por tipo de crédito a realizar</option>
+                    <option value="Credito menor a $1.000.000"> Credito menor a $1.000.000</option>
+                    <option value="Credito menor a $800.000">Credito menor a $800.000</option>
+                    <option value="Credito menor a $600.000">Credito menor a $600.000 </option>
+                    <option value="Credito menor a $400.000">Credito menor a $400.000</option>
+                </select>
+                <select id="comboIngresos">
+                    <option value='' disabled selected> Filtrar por tipo de ingresos</option>
+                    <option value="Ingresos mayores a $1.000.000">Ingresos mayores a $1.000.000</option>
+                    <option value="Ingresos mayores a $800.000">Ingresos mayores a $800.000</option>
+                    <option value="Ingresos mayores a $600.000">Ingresos mayores a $600.000</option>
+                    <option value="Ingresos mayores a $400.000">Ingresos mayores a $400.000</option>
+                
+                </select>
+
+                <!--  <input id="inputBuscar" type="text" placeholder="Ingrese una palabra clave para buscar">
+                <button id="botonBuscar"> Buscar </button>-->
+            </div>
+
+
+
+
+        </main>
+        <!-- Desde aqui agregue-->
+        <div id="contenedorFiltros" class="row">
+            <div class="col-2" id="filtros">
+                <div id="filtrosActivos">
+                    <!-- Aqui tengo que poner los filtros que voy eligiendo-->
+                    <h6 id="pfiltros">Filtros Activos:</h6>
+                </div>
+                <hr>
+                <p>Precios AR$</p>
+           <!--    <form>
+                    <input id="cpeso" name="moneda" type="radio" value="peso" />AR$
+                    <input id="cdolar" name="moneda" type="radio" value="dolar" />US$
+                </form>-->  
+                <p id="pdesde">Desde:</p> <input id="iDesde" type="number">
+                <p id="phasta">Hasta:</p> <input id="iHasta" type="number">
+                <button id="baplicar"> Aplicar</button>
+                <hr>
+
+                <p>Tipo de Credito</p>
+                <input type="checkbox" id="cboxCreditoA" value="cboxCreditoA"><label for="cboxCreditoA"> Credito A</label>
+                <br>
+                <input type="checkbox" id="cboxCreditoB" value="cboxCreditoB"> <label
+                    for="cboxCreditoB">Credito B</label><br>
+                    <br>
+                    <input type="checkbox" id="cboxCreditoC" value="cboxCreditoC"> <label
+                        for="cboxCreditoC">Credito C</label><br>
+                        <br>
+                <input type="checkbox" id="cboxCreditoD" value="cboxCreditoD"> <label
+                    for="cboxCreditoD">Credito D</label><br>
+
+                <p>Tipo de ingresos</p>
+                <input type="checkbox" id="cbox1" value="cboxIngresosA"><label for="cbox1">Ingresos A</label> <br>
+                <input type="checkbox" id="cbox2" value="cboxIngresosB"> <label for="cbox2">Ingresos B</label><br>
+                <input type="checkbox" id="cbox3" value="cboxIngresosC"><label for="cbox3">Ingresos C</label> <br>
+                <input type="checkbox" id="cbox4" value="cboxIngresosD"><label for="cbox4">Ingresos D</label> <br>
+
+            </div>
+
+            <div class="col-9" id="displayIndex">
+                
+
+            </div>
+            <!-- Hasta aqui agregue-->
+
+        </div>
+
+
+        <footer id=footer_index class="row">
+            <div class="col-6">
+                <h3>Acerca de Nosotros:</h3>
+                <h5> IW CONSULTING - SA </h5>
+                <h5> Fundada en 2020 - CUIT: 30-99968XX-8</h5>
+                <h5> Direccion: Av. Córdoba 561, Capital Federal</h5>
+                <h5>Teléfono: 11 5003 3707</h5>
+                <h5>Email: iwconsulting@gmail.com</h5>
+                <hr>
+            </div>
+
+            <p id="pAutor"> © Autor: Act. Ian Wade --- Email: ianwade14@gmail.com </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
